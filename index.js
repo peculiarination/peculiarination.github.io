@@ -1,7 +1,7 @@
 localStorage = window.localStorage;
 
-if (localStorage.getItem('newUser') === 0){
-    localStorage.setItem('newUser', 1) 
+if (localStorage.getItem('newUser') === false){
+    localStorage.setItem('newUser', true) 
     localStorage.setItem('gold', 0) 
     localStorage.setItem('goldPerClick', 1)
     localStorage.setItem('goldPerClickCost', 10)
