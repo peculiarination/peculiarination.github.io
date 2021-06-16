@@ -1,10 +1,9 @@
-var Data = {
-    gold: 0,
+var data = {
+    gold: 1,
     gps: 1
 }
 
 function farmPecu(){
-    Data.gold += Data.gps
-    document.getElementById("gold").innerHTML = Data.gold + " Pecu Mined"
-
+    data.gold += data.gps
+    document.getElementById("gold").innerHTML = data.gold + " Pecu Mined"
 }
