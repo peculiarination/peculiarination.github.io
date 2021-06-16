@@ -33,8 +33,8 @@ var gameData = {
   
   var mainGameLoop = window.setInterval(function() {
     mineGold()
-    localStorage.setItem('gold', gold) 
-    localStorage.setItem('goldPerClick', goldPerClick)
-    localStorage.setItem('goldPerClickCost', goldPerClickCost)
+    localStorage.setItem('gold', gameData.gold) 
+    localStorage.setItem('goldPerClick', gameData.goldPerClick)
+    localStorage.setItem('goldPerClickCost', gameData.goldPerClickCost)
 
   }, 1000)
