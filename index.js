@@ -3,7 +3,9 @@ var gameData = {
     goldPerClick: 1,
     goldPerClickCost: 10
   }
-  
+
+  window.mineGold = mineGold
+  window.buyGoldPerClick = buyGoldPerClick
   function mineGold() {
     gameData.gold += gameData.goldPerClick
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
