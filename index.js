@@ -10,4 +10,5 @@ function farmPecu(){
 
 function upPickaxe(){
     data.gps += 1
+    document.getElementById("pickaxe_upgrade").innerHTML = "Pickaxe Upgrade - " + (data.gps * 10) + 10
 }
