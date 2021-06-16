@@ -1,11 +1,21 @@
+localStorage = window.localStorage;
+
+if (localStorage.getItem('newUser') === False){
+    localStorage.setItem('newUser', True) 
+    localStorage.setItem('gold', 0) 
+    localStorage.setItem('goldPerClick', 1)
+    localStorage.setItem('goldPerClickCost', 10)
+}
+
 var gameData = {
-    gold: 0,
-    goldPerClick: 1,
-    goldPerClickCost: 10
+    gold: localStorage.getItem('gold'),
+    goldPerClick: localStorage.getItem('goldPerClick'),
+    goldPerClickCost: localStorage.getItem('goldPerClickCost')
   }
 
   window.mineGold = mineGold
   window.buyGoldPerClick = buyGoldPerClick
+  
   function mineGold() {
     gameData.gold += gameData.goldPerClick
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
