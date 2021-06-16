@@ -23,4 +23,4 @@ var gameData = {
   
   var mainGameLoop = window.setInterval(function() {
     mineGold()
-  }, 1000)
+  }, 1)
