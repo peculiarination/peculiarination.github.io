@@ -1,18 +1,13 @@
 <!DOCTYPE html>
-<html>
-    <script src="index.js" charset="utf-8" type="text/javascript"> </script>
-    <head>
-        <title> PecuFarm! </title>
-    </head>
-
-    <body>
-        <center>
-            <h1 id="gold"> 0 Peculiar Farmed </h1>
-            <button onclick="farmPecu()" > Farm </button>
-        </center>
-
-        <h1 id="pickaxe_upgrade"> Pickaxe Upgrade - 10 Pecu</h1>
-        <button onclick="upPickaxe()"> Upgrade Pickaxe </button>
-        
-    </body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Peculiar Miner</title>
+  </head>
+  <body>
+    <p id="goldMined">0 Gold Mined</p>
+    <button onclick="mineGold()">Mine Gold</button>
+    <button onclick="buyGoldPerClick()" id="perClickUpgrade">Upgrade Pickaxe (Currently Level 1) Cost: 10 Gold</button>
+    <script src="index.js" charset="utf-8" type="text/javascript"></script>
+  </body>
 </html>

@@ -1,14 +1,24 @@
-var data = {
-    gold: 1,
-    gps: 1
-}
-
-function farmPecu(){
-    data.gold += data.gps
-    document.getElementById("gold").innerHTML = data.gold + " Farmed"
-}
-
-function upPickaxe(){
-    data.gps += 1
-    document.getElementById("pickaxe_upgrade").innerHTML = "Pickaxe Upgrade - " + (data.gps * 10) + 10
-}
+var gameData = {
+    gold: 0,
+    goldPerClick: 1,
+    goldPerClickCost: 10
+  }
+  
+  function mineGold() {
+    gameData.gold += gameData.goldPerClick
+    document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
+  }
+  
+  function buyGoldPerClick() {
+    if (gameData.gold >= gameData.goldPerClickCost) {
+      gameData.gold -= gameData.goldPerClickCost
+      gameData.goldPerClick += 1
+      gameData.goldPerClickCost *= 2
+      document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
+      document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
+    }
+  }
+  
+  var mainGameLoop = window.setInterval(function() {
+    mineGold()
+  }, 1000)
