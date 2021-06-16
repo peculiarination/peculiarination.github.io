@@ -5,5 +5,5 @@ var data = {
 
 function farmPecu(){
     data.gold += data.gps
-    document.getElementById("gold").innerHTML = data.gold + " Pecu Mined"
+    document.getElementById("gold").innerHTML = data.gold + " Farmed"
 }
