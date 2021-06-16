@@ -21,6 +21,7 @@ var gameData = {
   function mineGold() {
     gameData.gold += (gameData.goldPerClick)
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
+    document.getElementById("perClickUpgrade").innerHTML = "Upgrade Autominer (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
   }
   
   function buyGoldPerClick() {
@@ -32,11 +33,31 @@ var gameData = {
       document.getElementById("perClickUpgrade").innerHTML = "Upgrade Autominer (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
     }
   }
+
+  function reset(){
+     gameData = {
+        gold: 0,
+        goldPerClick: 1,
+        goldPerClickCost: 10
+      }
+      localStorage.clear()
+      if (!localStorage.getItem('gold')){
+        localStorage.setItem('gold', 0) 
+        localStorage.setItem('goldPerClick', 1)
+        localStorage.setItem('goldPerClickCost', 10)
+        }
+        
+      
+  }
   
   var mainGameLoop = window.setInterval(function() {
     mineGold()
     localStorage.setItem('gold', gameData.gold) 
     localStorage.setItem('goldPerClick', gameData.goldPerClick)
     localStorage.setItem('goldPerClickCost', gameData.goldPerClickCost)
+        
 
   }, 1000)
+
+  
+
