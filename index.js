@@ -7,7 +7,7 @@ var gameData = {
   window.mineGold = mineGold
   window.buyGoldPerClick = buyGoldPerClick
   function mineGold() {
-    gameData.gold += gameData.goldPerClick / 1000
+    gameData.gold += gameData.goldPerClick
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
   }
   
@@ -23,4 +23,4 @@ var gameData = {
   
   var mainGameLoop = window.setInterval(function() {
     mineGold()
-  }, 1)
+  }, 1000)
