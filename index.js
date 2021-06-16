@@ -7,3 +7,7 @@ function farmPecu(){
     data.gold += data.gps
     document.getElementById("gold").innerHTML = data.gold + " Farmed"
 }
+
+function upPickaxe(){
+    data.gps += 1
+}
