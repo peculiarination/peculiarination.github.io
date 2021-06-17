@@ -46,7 +46,7 @@ var gameData = {
       gameData.goldPerClick *= 2
       gameData.goldPerClickCost += gameData.goldPerClickCost * 2
       document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
-      document.getElementById("perSecondUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
+      document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
     }
   }
 
