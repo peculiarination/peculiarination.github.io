@@ -8,12 +8,15 @@ gameData = {
     pickaxes:0,
     pickaxeCost:10,
     miners:0,
-    minerCost:100
+    minerCost:100,
+    drills:0,
+    drillCost:500
   }
 
   window.mineBlock = mineBlock 
   window.buyPickaxe = buyPickaxe
-  window.buyMiner = buyMiner    
+  window.buyMiner = buyMiner 
+  window.buyDrill = buyDrill   
 
   function mineBlock() {
     gameData.blocks += (gameData.blocksPerClick)
@@ -39,6 +42,17 @@ gameData = {
         gameData.minerCost += Math.floor((gameData.minerCost) / 2)
         document.getElementById("miners").innerHTML = String(gameData.miners)
         document.getElementById("minerCost").innerHTML = String(gameData.minerCost) + " Blocks"
+    }
+  }
+
+  function buyDrill(){
+    if (gameData.blocks >= gameData.drillCost){
+        gameData.blocks -= gameData.drillCost
+        gameData.blocksPerSecond += 5
+        gameData.drills += 1
+        gameData.drillCost += Math.floor((gameData.drillCost) / 2)
+        document.getElementById("drills").innerHTML = String(gameData.drills)
+        document.getElementById("drillCost").innerHTML = String(gameData.drillCost) + " Blocks"
     }
   }
 
