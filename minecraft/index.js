@@ -1,7 +1,9 @@
 localStorage = window.localStorage;
 
+
+
 int = parseInt
-gameData = {
+tempData = {
     blocks: 0,
     blocksPerClick: 1,
     blocksPerSecond: 0,
@@ -12,6 +14,30 @@ gameData = {
     drills:0,
     drillCost:500
   }
+
+
+for (var key in tempData) {
+  if (!localStorage.getItem(key)){
+   var value = String(key)
+   localStorage.setItem(key, tempData[value])
+   console.log(key + ' ' + tempData.key)
+  }
+}
+
+
+gameData = {
+  
+    blocks: int(localStorage.getItem('blocks')),
+    blocksPerClick: int(localStorage.getItem('blocksPerClick')),
+    blocksPerSecond: int(localStorage.getItem('blocksPerSecond')),
+    pickaxes:int(localStorage.getItem('pickaxes')),
+    pickaxeCost:int(localStorage.getItem('pickaxeCost')),
+    miners:int(localStorage.getItem('miners')),
+    minerCost:int(localStorage.getItem('minerCost')),
+    drills:int(localStorage.getItem('drills')),
+    drillCost:int(localStorage.getItem('drillCost'))
+  
+}
 
   window.mineBlock = mineBlock 
   window.buyPickaxe = buyPickaxe
@@ -61,6 +87,14 @@ gameData = {
     document.getElementById("blocksMined").innerHTML = gameData.blocks + " blocks"
     document.getElementById("dps").innerHTML = "Blocks per Second: " + gameData.blocksPerSecond
   }, 1000)
+
+  var saveGameLoop = window.setInterval(function() {
+    for (var item in gameData){
+      if (!localStorage.item){
+       localStorage.setItem(item, (gameData[item]))
+      }
+    }
+  }, 10000)
 
 
 
