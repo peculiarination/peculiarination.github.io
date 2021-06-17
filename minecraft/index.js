@@ -59,6 +59,7 @@ gameData = {
   var mainGameLoop = window.setInterval(function() {
     gameData.blocks += gameData.blocksPerSecond
     document.getElementById("blocksMined").innerHTML = gameData.blocks + " blocks"
+    document.getElementById("dps").innerHTML = "Blocks per Second: " + gameData.blocksPerSecond
   }, 1000)
 
 
