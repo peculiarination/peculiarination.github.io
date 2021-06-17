@@ -86,6 +86,12 @@ gameData = {
     gameData.blocks += gameData.blocksPerSecond
     document.getElementById("blocksMined").innerHTML = gameData.blocks + " blocks"
     document.getElementById("dps").innerHTML = "Blocks per Second: " + gameData.blocksPerSecond
+    document.getElementById("pickaxes").innerHTML = String(gameData.pickaxes)
+    document.getElementById("pickaxeCost").innerHTML = String(gameData.pickaxeCost) + " Blocks"
+    document.getElementById("miners").innerHTML = String(gameData.miners)
+    document.getElementById("minerCost").innerHTML = String(gameData.minerCost) + " Blocks"
+    document.getElementById("drills").innerHTML = String(gameData.drills)
+    document.getElementById("drillCost").innerHTML = String(gameData.drillCost) + " Blocks"
   }, 1000)
 
   var saveGameLoop = window.setInterval(function() {
