@@ -1,13 +1,42 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'>
-    <meta charset="utf-8">
-    <title>Minecraft Site</title>
+    <title> Minecraft Block Miner </title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+
   </head>
   <body>
-    Hello!
+    <div class="clicker">
+      <div class="clicker__button-area">
+        <div id="blocksMined">Blocks: 0</div>
+        <button class="clicker__button" onclick="mineBlock()"> </button>
+      </div>
+    </div>
+    <div class="buyables">
+      <div class="buyable">
+        <div class="buyable__amount" id="pickaxes"> 0 </div>
+        <div class="buyable__text">
+          <div class="buyable__title">
+            <span class="buyable__title-text"> Extra Pickaxes </span>
+            <span class="buyable__title-price" id="pickaxeCost"> 10 Blocks </span>
+          </div>
+          <div class="buyable__description"> More pickaxes = more mining </div>
+          <div class="buyable__effect"> Mines 1 block per click </div>
+        </div>
+        <button class="buyable__button" onclick="buyPickaxe()"> Buy </button>
+      </div>
+      <div class="buyable">
+        <div class="buyable__amount" id="miners"> 0 </div>
+        <div class="buyable__text">
+          <div class="buyable__title">
+            <span class="buyable__title-text"> Miner </span>
+            <span class="buyable__title-price" id="minerCost"> 100 Blocks </span>
+          </div>
+          <div class="buyable__description"> Not the most skilled, but they get the work done </div>
+          <div class="buyable__effect"> Mines 1 block per second </div>
+        </div>
+        <button class="buyable__button" onclick="buyMiner()"> Buy </button>
+      </div>
+    </div>
+    <script src="index.js" charset="utf-8" type="text/javascript"></script>
   </body>
 </html>
