@@ -93,3 +93,20 @@ html {
     height: 30px;
     width: 80px;
   }
+
+  .upgrades {
+    background: #fdf6e3;
+    height: 50%;
+    overflow: auto;
+  }
+
+  .upgrade {
+    display: flex;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid #002b36;
+    border-radius: 8px;
+    width: 600px;
+    height: 75px;
+    float: right;
+  }
