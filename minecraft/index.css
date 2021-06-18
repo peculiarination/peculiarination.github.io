@@ -110,3 +110,24 @@ html {
     height: 75px;
     float: right;
   }
+
+  .reset {
+    height: 40px;
+    width: 60px;
+  
+    background-color: #fdf6e3;
+    border: 2px solid #859900;
+    border-radius: 8px;
+    color: #859900;
+    outline: none;
+    float:left;
+  }
+
+  .reset_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #002b35;
+  }
+
+  
