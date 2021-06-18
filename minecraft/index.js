@@ -104,6 +104,14 @@ gameData = {
     window.location.reload()
   }
 
+  function save(){
+    for (var item in gameData){
+      if (!localStorage.item){
+       localStorage.setItem(item, (gameData[item]))
+      }
+    }
+  }
+
   var mainGameLoop = window.setInterval(function() {
     gameData.blocks += gameData.blocksPerSecond
     document.getElementById("blocksMined").innerHTML = gameData.blocks + " blocks"
