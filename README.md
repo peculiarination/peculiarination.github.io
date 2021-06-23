@@ -1,2 +1,2 @@
 # pecufarm
-+ Visit [here](https://peculiarination.github.io/pecufarm)!
++ Visit [here](https://peculiarination.github.io)!
