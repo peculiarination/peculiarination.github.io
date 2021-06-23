@@ -135,8 +135,6 @@ gameData = {
        localStorage.setItem(item, (gameData[item]))
       }
     }
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
   }, 10000)
 
 
