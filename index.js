@@ -127,6 +127,37 @@ gameData = {
     document.getElementById("drillCost").innerHTML = String(gameData.drillCost) + " Blocks"
     document.getElementById("tractors").innerHTML = String(gameData.tractors)
     document.getElementById("tractorCost").innerHTML = String(gameData.tractorCost) + " Blocks"
+    if (gameData.blocks >= 1000000000000){
+      return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/0b/Block_of_Emerald_JE4_BE3.png')"
+    }
+    if (gameData.blocks >= 100000000000){
+      return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/54/Emerald_Ore_JE3_BE2.png')"
+    }
+    if (gameData.blocks >= 10000000000){
+      return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/6b/Block_of_Diamond_JE6_BE3.png')"
+    }
+    if (gameData.blocks >= 1000000000){
+      return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/b/b5/Diamond_Ore_JE3_BE3.png')"
+    }
+    if (gameData.blocks >= 100000000){
+      return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/72/Block_of_Gold_JE6_BE3.png')"
+    }
+    if (gameData.blocks >= 10000000){
+      return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/b/b9/Gold_Ore_JE3_BE2.png')"
+    }
+    if (gameData.blocks >= 1000000){
+      return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/79/Block_of_Iron_JE3_BE2.png')"
+    }
+    if (gameData.blocks >= 100000){
+      return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/0c/Iron_Ore_JE3.png')"
+    }
+    if (gameData.blocks >= 10000){
+      return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/c/cc/Block_of_Coal_JE3_BE2.png')"
+    }
+    if(gameData.blocks >= 1000){
+      return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/4/48/Coal_Ore_JE5_BE4.png')"
+    }
+    return document.getElementById('clicker__button').style.backgroundImage = "url('stone.png')"
   }, 1000)
 
   var saveGameLoop = window.setInterval(function() {
