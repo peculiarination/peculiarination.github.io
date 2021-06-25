@@ -39,7 +39,7 @@ html {
   }
   
   .clicker__button{
-    background-image: url("https://static.wikia.nocookie.net/minecraft/images/d/d4/Stone.png");
+    background-image: url("stone.png");
     background-size: cover;
     height: 200px;
     width: 200px;
@@ -47,7 +47,7 @@ html {
     border: none;
     outline: none;
     overflow: hidden;
-    cursor: url("http://chloecodes.space/strg/Ruby_Pickaxe_(Level_1).png"), auto;
+    cursor: url("pickaxe.png"), auto;
   }
 
   .clicker__button:active{
