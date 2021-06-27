@@ -5,6 +5,7 @@ localStorage = window.localStorage;
 int = parseInt
 tempData = {
     blocks: 0,
+    highestBlocks: 0,
     blocksPerClick: 1,
     blocksPerSecond: 0,
     pickaxes:0,
@@ -30,6 +31,7 @@ for (var key in tempData) {
 gameData = {
   
     blocks: int(localStorage.getItem('blocks')),
+    highestBlocks: int(localStorage.getItem('highestBlocks')),
     blocksPerClick: int(localStorage.getItem('blocksPerClick')),
     blocksPerSecond: int(localStorage.getItem('blocksPerSecond')),
     pickaxes:int(localStorage.getItem('pickaxes')),
@@ -116,6 +118,9 @@ gameData = {
 
   var mainGameLoop = window.setInterval(function() {
     gameData.blocks += gameData.blocksPerSecond
+    if (gameData.blocks > gameData.highestBlocks){
+      gameData.highestBlocks = gameData.blocks
+    }
     document.getElementById("blocksMined").innerHTML = gameData.blocks + " blocks"
     document.getElementById("dps").innerHTML = "Blocks per Second: " + gameData.blocksPerSecond
     document.getElementById("dpc").innerHTML = "Blocks per Click: " + gameData.blocksPerClick
@@ -127,34 +132,34 @@ gameData = {
     document.getElementById("drillCost").innerHTML = String(gameData.drillCost) + " Blocks"
     document.getElementById("tractors").innerHTML = String(gameData.tractors)
     document.getElementById("tractorCost").innerHTML = String(gameData.tractorCost) + " Blocks"
-    if (gameData.blocks >= 1000000000000){
+    if (gameData.highestBlocks >= 1000000000000){
       return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/0b/Block_of_Emerald_JE4_BE3.png')"
     }
-    if (gameData.blocks >= 100000000000){
+    if (gameData.highestBlocks >= 100000000000){
       return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/54/Emerald_Ore_JE3_BE2.png')"
     }
-    if (gameData.blocks >= 10000000000){
+    if (gameData.highestBlocks >= 10000000000){
       return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/6b/Block_of_Diamond_JE6_BE3.png')"
     }
-    if (gameData.blocks >= 1000000000){
+    if (gameData.highestBlocks >= 1000000000){
       return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/b/b5/Diamond_Ore_JE3_BE3.png')"
     }
-    if (gameData.blocks >= 100000000){
+    if (gameData.highestBlocks >= 100000000){
       return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/72/Block_of_Gold_JE6_BE3.png')"
     }
-    if (gameData.blocks >= 10000000){
+    if (gameData.highestBlocks >= 10000000){
       return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/b/b9/Gold_Ore_JE3_BE2.png')"
     }
-    if (gameData.blocks >= 1000000){
+    if (gameData.highestBlocks >= 1000000){
       return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/79/Block_of_Iron_JE3_BE2.png')"
     }
-    if (gameData.blocks >= 100000){
+    if (gameData.highestBlocks >= 100000){
       return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/0c/Iron_Ore_JE3.png')"
     }
-    if (gameData.blocks >= 10000){
+    if (gameData.highestBlocks >= 10000){
       return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/c/cc/Block_of_Coal_JE3_BE2.png')"
     }
-    if(gameData.blocks >= 1000){
+    if(gameData.highestBlocks >= 1000){
       return document.getElementById('clicker__button').style.backgroundImage = "url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/4/48/Coal_Ore_JE5_BE4.png')"
     }
     return document.getElementById('clicker__button').style.backgroundImage = "url('stone.png')"
@@ -167,6 +172,9 @@ gameData = {
       }
     }
   }, 10000)
+
+
+
 
 
 
