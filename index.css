@@ -147,9 +147,31 @@ html {
     cursor: pointer;
   }
 
+  .block {
+    height: 40px;
+    width: 60px;
+  
+    background-color: #fdf6e3;
+    border: 2px solid #859900;
+    border-radius: 8px;
+    color: #859900;
+    outline: none;
+    float: right;
+    cursor: pointer;
+  }
+
+  .blocksubbar{
+    margin-right: -5px;
+
+  }
+
   .optionbar {
     display: flex;
     background-color: rgb(80, 194, 3);
+  }
+
+  .filler{
+    flex-grow: 1;
   }
 
   /* Popup container */

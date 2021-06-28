@@ -61,7 +61,7 @@ gameData = {
         gameData.blocks -= gameData.pickaxeCost
         gameData.blocksPerClick += 1
         gameData.pickaxes += 1
-        gameData.pickaxeCost += Math.floor((gameData.pickaxeCost) / 5)
+        gameData.pickaxeCost += Math.floor((gameData.pickaxeCost) / 10)
         document.getElementById("pickaxes").innerHTML = String(gameData.pickaxes)
         document.getElementById("pickaxeCost").innerHTML = String(gameData.pickaxeCost) + " Blocks"
     }
@@ -72,7 +72,7 @@ gameData = {
         gameData.blocks -= gameData.minerCost
         gameData.blocksPerSecond += 1
         gameData.miners += 1
-        gameData.minerCost += Math.floor((gameData.minerCost) / 10)
+        gameData.minerCost += Math.floor((gameData.minerCost) / 20)
         document.getElementById("miners").innerHTML = String(gameData.miners)
         document.getElementById("minerCost").innerHTML = String(gameData.minerCost) + " Blocks"
     }
@@ -83,7 +83,7 @@ gameData = {
         gameData.blocks -= gameData.drillCost
         gameData.blocksPerSecond += 5
         gameData.drills += 1
-        gameData.drillCost += Math.floor((gameData.drillCost) / 15)
+        gameData.drillCost += Math.floor((gameData.drillCost) / 30)
         document.getElementById("drills").innerHTML = String(gameData.drills)
         document.getElementById("drillCost").innerHTML = String(gameData.drillCost) + " Blocks"
     }
@@ -95,7 +95,7 @@ gameData = {
         gameData.blocksPerSecond += 20
         gameData.blocksPerClick += 3
         gameData.tractors += 1
-        gameData.tractorCost += Math.floor((gameData.tractorCost) / 20)
+        gameData.tractorCost += Math.floor((gameData.tractorCost) / 40)
         document.getElementById("tractors").innerHTML = String(gameData.tractors)
         document.getElementById("tractorCost").innerHTML = String(gameData.tractorCost) + " Blocks"
     }
